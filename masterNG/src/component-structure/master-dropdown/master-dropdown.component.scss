@@ -1,0 +1,14 @@
+@import "src/scss/color.scss";
+
+.dropdwon-style{
+  padding: 10px;
+  width: 20%;
+  border-radius: 5px;
+  outline-color: $light-gray;
+  border: 1px solid $grey;
+  option{
+    font-size: 14px;
+    width: 100%;
+    border-radius: 0 !important;
+  }
+}

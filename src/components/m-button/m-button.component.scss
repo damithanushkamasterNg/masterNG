@@ -1,0 +1,16 @@
+@import "../../scss/color.scss";
+
+.button-type {
+  display: flex;
+}
+
+.btn-category {
+  margin-right: 10px;
+  color: $secondary-blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+ul{
+  margin-bottom: 10px;
+}

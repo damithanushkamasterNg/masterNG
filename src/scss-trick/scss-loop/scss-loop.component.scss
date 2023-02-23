@@ -1,0 +1,37 @@
+$columns: 5;
+
+@for $i from 1 through $columns {
+  .columns-#{$i} {
+    width: (100% / $i);
+    border: 1px solid red;
+    margin: 4px;
+  }
+}
+
+$color-array:(
+  black: #4e4e4e,
+  blue: #0099cc,
+  green: #2ebc78
+);
+@each $color-name, $color-value in $color-array {
+  .bg-#{$color-name} {
+    border: 1px solid red;
+    padding: 4px;
+    margin: 4px;
+    background: $color-value;
+  }
+}
+
+
+$font-size: 1;
+
+@while $font-size <= 50 {
+  .m-f-#{$font-size} {
+    border: 1px solid red;
+    padding: 4px;
+    margin: 4px;
+    font-size: ($font-size * 1px) !important;
+  }
+
+  $font-size: $font-size + 1;
+}

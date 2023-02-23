@@ -1,0 +1,7 @@
+<div class="m-inline-flex radio-button-style">
+  <div *ngFor="let op of options; let i=index">
+    <input type="radio" id="{{op.id}}" name="e"  [value]="op.value"
+           [checked]="op.checked"  (change)="onChange.emit(op.value)">
+    <label for="{{op.id}}">{{op.value}}</label>
+  </div>
+</div>

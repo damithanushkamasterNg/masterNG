@@ -1,0 +1,54 @@
+@import "/src/scss/color.scss";
+
+
+//pow
+@function pow($base, $exponent) {
+  $result: 1;
+  @for $_ from 1 through $exponent {
+    $result: $result * $base;
+  }
+  @return $result;
+}
+
+.text01 {
+  padding: 10px;
+  float: left;
+  height: 100px;
+  width: 100px;
+  border: 1px solid red;
+  margin-left: pow(4, 3) * 1px;
+}
+
+.text02 {
+  padding: 10px;
+  height: 100px;
+  border: 1px solid red;
+  float: left;
+  width: calc(10 * pow(4, 3))* 1px;
+}
+
+//invert
+@function invert($color, $amount: 100%) {
+  $inverse: change-color($color, $hue: hue($color) + 180);
+  @return mix($inverse, $color, $amount);
+}
+
+
+.header {
+  padding: 40px;
+  background-color: invert($green, 80%);
+}
+
+//sum
+@function sum($numbers...) {
+  $sum: 0;
+  @each $number in $numbers {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+}
+
+.micro {
+  background-color: $green;
+  width: sum(50px, 100px);
+}

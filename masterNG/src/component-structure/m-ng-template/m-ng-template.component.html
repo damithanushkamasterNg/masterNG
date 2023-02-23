@@ -1,0 +1,80 @@
+<div class="c-intro">
+
+  Basic Concepts
+
+  <ul>
+    <li>ng-template</li>
+    <li>TemplateRef</li>
+    <li>ng-container</li>
+    <li>ngTemplateOutlet</li>
+  </ul>
+
+</div>
+
+
+<div class="c-intro">
+  <span class="sub-header"> ng-template </span>
+
+  <p>Like the name indicates, the ng-template directive represents an Angular template: this means that the content of
+    this tag will contain part of a template, that can be then be composed together with other templates in order to
+    form the final component template.
+
+    Angular is already using ng-template under the hood in many of the structural directives that we use all the time:
+    ngIf, ngFor and ngSwitch.</p>
+
+  <p>The
+    ng-template is an Angular element, which contains the template. A template is an HTML snippet. The template does
+    not render itself on DOM.
+
+  </p>
+
+  Way to display ng template content
+  <ol>
+    <li>ngTemplateOutlet directive.</li>
+    <li>TemplateRef</li>
+    <li>ng-ViewContainerRef</li>
+  </ol>
+
+
+  <span class="sample-topic"> 1.When Consider following example should be out put
+    as Say Hello ng-container inside content not visible(ngTemplateOutlet directive)</span>
+  <textarea disabled class="code-viewer">
+     <ng-template #ref>
+      <p> Inside ng template</p>
+    </ng-template>
+
+    <ng-container *ngTemplateOutlet="ref">
+      Inside ng container
+    </ng-container>
+
+    //Out Put is -> Inside ng template
+  </textarea>
+
+
+  <span class="sample-topic"> 2.The ViewContainerRef is also similar to TemplateRef.
+    Both hold the reference to part of the view.(TemplateRef)</span>
+
+  <textarea disabled class="code-viewer-2">
+
+    html--
+
+    <ng-template #ref>
+      <p> Inside ng template</p>
+    </ng-template>
+
+    ts--
+
+   @ViewChild('ref') ref: any;
+
+   constructor(public viewContainerRef:ViewContainerRef) { }
+
+   ngAfterViewInit() {
+    this.viewContainerRef.createEmbeddedView(this.ref);
+   }
+
+     //Out Put is -> Inside ng template
+
+  </textarea>
+
+
+</div>

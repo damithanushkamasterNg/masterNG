@@ -1,0 +1,13 @@
+<label class="check-box-outer">
+  <input type="checkbox" [(ngModel)]="isChecked" #parent
+         (change)="onParentCheckChange(parent.checked)" [indeterminate]="partialSelect()">
+  {{groupName}}
+</label><br>
+
+<div *ngFor="let child of childrens; let i=index" class="col-md-2 m-mt-2 child-check-box">
+  <label>
+    <input type="checkbox" #checked [(ngModel)]="child.value"
+           (change)="onChildrenCheckChange(child, checked.checked)">
+    {{child.label}}
+  </label>
+</div>

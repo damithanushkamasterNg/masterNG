@@ -1,0 +1,13 @@
+<ng-container [ngTemplateOutlet]="accordionSet"></ng-container>
+
+
+<ng-template #accordionSet>
+  <button class="accordion" id="{{id}}" #event (click)="clickOnPanel(event.id)">
+    <ng-content select="header"></ng-content>
+  </button>
+
+  <div class="panel">
+    <ng-content select="body"></ng-content>
+    <ng-content select="footer"></ng-content>
+  </div>
+</ng-template>

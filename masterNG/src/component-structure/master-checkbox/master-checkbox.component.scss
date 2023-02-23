@@ -1,0 +1,15 @@
+.checkbox-label{
+  position: relative;
+  font-size: 17px;
+  padding-top: 5px;
+  margin-top: 100px;
+  input{
+    position: absolute;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+  }
+}
+.checkbox{
+  margin-top: 20px;
+}

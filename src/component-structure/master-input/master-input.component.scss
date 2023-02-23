@@ -1,0 +1,30 @@
+@import "src/scss/color.scss";
+
+//inputBox/textarea related styles
+
+input{
+  width: 20%;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border-radius: 11px;
+  border: 1px solid $grey;
+  font-size: 16px;
+  color: darken($grey, 12%);
+  &:hover{
+    font-weight: 100;
+  };
+  &:active{
+    border: none !important;
+  };
+}
+
+input:focus {
+  border-color: red !important;
+  outline-color: $light-gray;
+  outline-width: 1rem;
+}
+
+input:hover{
+  border-color: darken($light-gray, 12%);
+  box-shadow: none;
+}

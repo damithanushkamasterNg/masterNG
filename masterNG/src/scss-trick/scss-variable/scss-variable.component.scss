@@ -1,0 +1,25 @@
+@use "sass:math" as math;
+@use "sass:map";
+
+$dark-theme: false !default;
+$primary-color: #f8bbd0 false !default;
+$accent-color: #6a1b9a !default;
+
+@if $dark-theme {
+  $primary-color: darken($primary-color, 60%);
+  $accent-color: lighten($accent-color, 60%);
+}
+
+.label {
+  padding: 50px;
+  margin-top: 40px;
+  background-color: $primary-color;
+  border: 1px solid $accent-color;
+  border-radius: 3px;
+}
+
+$theme-colors: (
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+);

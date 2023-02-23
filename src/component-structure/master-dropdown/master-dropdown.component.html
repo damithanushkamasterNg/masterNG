@@ -1,0 +1,4 @@
+<select name="name" id="id" class="dropdwon-style"  [value]="selectedValue"
+        (change)='onOptionsSelected($event)'>
+  <option *ngFor="let op of options; let i=index">{{op.name}}</option>
+</select>

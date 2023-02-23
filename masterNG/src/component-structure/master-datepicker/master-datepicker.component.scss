@@ -1,0 +1,13 @@
+@import "src/scss/color.scss";
+
+//datepicker related styles
+
+.date-picker-style{
+  padding: 6px 12px 6px 12px;
+  font-size: 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  outline-color: $light-gray;
+  border: 1px solid $grey;
+  color: darken($grey, 12%);
+}

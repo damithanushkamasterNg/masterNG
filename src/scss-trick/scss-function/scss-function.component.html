@@ -1,0 +1,65 @@
+<div class="m-grid">
+  <div class="m-col-12">
+    <div class="m-header m-col-6">Scss Function</div>
+    <div class="m-col-6 m-grid-content-right">
+      <m-button buttonLabel="back" class="m-button-primary"
+                (btnClick)="router.navigateByUrl('scss-trick')"></m-button>
+    </div>
+
+  </div>
+
+  <div class="page-content">
+
+    <div class="c-intro">
+      <div class="page-h-text">Pow: Function contains two parameters $base, $exponent
+
+      </div>
+
+      <ul>
+        <li>$base: Base param is we want get value of power</li>
+        <li>$exponent: Power value</li>
+      </ul>
+
+      <div class="page-h-text">Exp01: Set margin left according to pass param $base = 4, $exponent = 3</div>
+      <div class="text01">
+        Margin left = 250px
+      </div>
+      <br>
+      <div class="page-h-text">Exp02: Set width according to pass param $base = 4, $exponent = 3</div>
+      <div class="text02">
+        Box Width = 640px
+      </div>
+
+    </div>
+
+    <div class="c-intro">
+
+      <div class="page-h-text">invert: Arguments allow functions’ behavior to be customized each time they’re called.
+        The arguments are specified in the @function rule after the function’s name, as a list of variable names
+        surrounded by parentheses. The function must be called with the same number of arguments in the form of
+        SassScript expressions. The values of these expression are available within the function’s body as the
+        corresponding variables
+      </div>
+
+      <div class="header">
+        Invert function
+      </div>
+
+    </div>
+
+    <div class="c-intro">
+
+      <div class="page-h-text">Sum: Sometimes it’s useful for a function to be able to take any number of arguments. If
+        the last argument in a @function declaration ends in ..., then all extra arguments to that function are passed
+        to that argument as a list. This argument is known as an argument list.
+      </div>
+
+      <div class="micro">
+        Sum function
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
