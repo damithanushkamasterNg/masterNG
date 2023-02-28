@@ -1,1 +1,36 @@
-<p>host-listener works!</p>
+<div class="page">
+
+  <h4>HostListener Introduction</h4>
+  HostListener - Declares a host listener. Angular will invoke the decorated method when the host element emits the
+  specified event. @HostListener - will listen to the event emitted by the host element that's declared with
+  @HostListener . HostBinding - Declares a host property binding.
+
+  <div class="c-intro">
+    1. I have created appHoverHostListener directive .this directive can be used to change background color
+
+    <textarea disabled class="code-viewer">
+     <div appHoverHostListener>
+      <p> Change Background Color</p>
+    </div>
+    //Out Put is -> Change background cor of text
+  </textarea>
+    <div appHoverHostListener class="margin-minus">Change Background Color</div>
+  </div>
+
+  <div class="c-intro">
+    1. I have created appMouseAction directive .this directive can be used to change background color when performing
+    mouse actions
+
+    <textarea disabled class="code-viewer">
+     <div appMouseAction>
+      <p> Change Background Color</p>
+    </div>
+
+    //Out Put is -> Change background cor move hover, mouse live
+  </textarea>
+    <div appMouseAction class="margin-minus">Change Background Color</div>
+  </div>
+
+  When considering From Above examples you gus can be understand Element which is hosted we can cache element status by
+  host listener
+</div>
