@@ -1,1 +1,23 @@
-<p>keyboard-event-directive works!</p>
+<div class="page">
+
+  <h4>KeyBoard Event Introduction</h4>
+
+
+  <div class="c-intro">
+    <h2>1. Click Event</h2>
+
+    <span>Trigger click event in m-button component:</span>
+    <m-button class="m-button-primary" buttonLabel="click" (click)="clickMessage=$event" >click with myClick</m-button>
+    {{clickMessage | json}}
+
+    <h2>2. KeyUp For Specific key</h2>
+    <m-button class="m-button-primary" buttonLabel="keyup" (click)="inputKeyUp=$event" >click with myClick</m-button>
+    {{inputKeyUp | json}}
+  </div>
+
+  <div class="c-intro">
+
+
+  </div>
+
+</div>

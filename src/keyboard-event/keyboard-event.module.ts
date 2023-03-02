@@ -8,6 +8,7 @@ import { HostListnerComponent } from './host-listner/host-listner.component';
 import { KeyboardEventDirectiveComponent } from './keyboard-event-directive/keyboard-event-directive.component';
 import { HoverHostListenerDirective } from './hover-host-listener.directive';
 import { MouseActionDirective } from './mouse-action.directive';
+import {ComponentStructureModule} from "../component-structure/component-structure.module";
 
 
 @NgModule({
@@ -19,9 +20,10 @@ import { MouseActionDirective } from './mouse-action.directive';
     HoverHostListenerDirective,
     MouseActionDirective
   ],
-  imports: [
-    CommonModule,
-    KeyboardEventRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        KeyboardEventRoutingModule,
+        ComponentStructureModule
+    ]
 })
 export class KeyboardEventModule { }
